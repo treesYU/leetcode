@@ -9,12 +9,12 @@ public:
     {
         if (x < 0)
             return false;
-        char buf[10] = {0};
-        sprinntf(buf, "%d", x);
+        char buf[20] = {0};
+        sprintf(buf, "%d", x);
         int size = strlen(buf);
         for (int i = 0; i < size / 2; i++)
         {
-            if (buf[i] != buf[size - i])
+            if (buf[i] != buf[size - 1 - i])
                 return false;
         }
         return true;
